@@ -1,0 +1,2178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Profile - FastTrack</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicons -->
+    <link href="src/assets/img/logo-fast-track.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <!-- =======================================================
+  * Template Name: Arsha
+  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+  * Updated: Feb 22 2025 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+    <!-- Custom Styles agar mirip referensi gambar -->
+    <style>
+      /* --- HEADER STYLES --- */
+      #header {
+        /* Background header MERAH solid sesuai gambar */
+        background-color: #ed1c23de !important;
+        padding: 15px 0;
+        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Warna link navigasi tetap putih */
+      .navmenu ul li a {
+        color: #fff !important;
+      }
+
+      /* Tombol Get Started di Header -> KUNING */
+      .btn-getstarted {
+        background: #ffce00 !important; /* Kuning */
+        color: #000 !important; /* Teks hitam agar kontras */
+        border-radius: 50px;
+        padding: 8px 25px;
+        white-space: nowrap;
+        transition: 0.3s;
+        font-size: 14px;
+        display: inline-block;
+        text-decoration: none;
+        font-weight: 600;
+        margin-left: 20px;
+      }
+
+      .btn-getstarted:hover {
+        background: #e6b800 !important;
+        color: #000 !important;
+      }
+
+      /* --- HERO SECTION STYLES --- */
+      #hero {
+        width: 100%;
+        min-height: 85vh;
+        position: relative;
+        padding: 140px 0 60px 0;
+        display: flex;
+        align-items: center;
+        /* Gambar background peta */
+        background: url("src/assets/img/bg-fast-track.png") center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      /* Overlay Biru-Abu Transparan sesuai gambar */
+      #hero:before {
+        content: "";
+        background: rgba(
+          119,
+          119,
+          119,
+          0.799
+        ); /* Biru-abu transparan seperti di gambar */
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+
+      #hero .container {
+        position: relative;
+        z-index: 2;
+      }
+
+      /* Judul Hero - Italic sesuai gambar */
+      #hero h1 {
+        margin: 0 0 15px 0;
+        font-size: 48px;
+        font-weight: 700;
+        font-style: italic;
+        line-height: 1.2;
+        color: #fff;
+      }
+
+      /* Teks paragraf Hero */
+      #hero p {
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 40px;
+        font-size: 18px;
+        max-width: 600px;
+      }
+
+      /* Tombol Get Started di dalam Hero -> BIRU MUDA */
+      #hero .btn-get-started {
+        font-family: "Jost", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: 1px;
+        display: inline-block;
+        padding: 12px 35px;
+        border-radius: 50px;
+        transition: 0.5s;
+        margin-right: 20px;
+        /* Warna Biru Muda */
+        background: #ed1c24;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      #hero .btn-get-started:hover {
+        background: #ed1c24;
+      }
+
+      /* Tombol Watch Video */
+      #hero .btn-watch-video {
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        transition: 0.5s;
+        color: #fff;
+        line-height: 1;
+        text-decoration: none;
+      }
+
+      #hero .btn-watch-video i {
+        line-height: 0;
+        color: #fff;
+        font-size: 32px;
+        transition: 0.3s;
+        margin-right: 8px;
+      }
+
+      #hero .btn-watch-video:hover i {
+        color: #e44747;
+      }
+
+      /* Animasi Logo Kanan */
+      #hero .animated {
+        animation: up-down 2s ease-in-out infinite alternate-reverse both;
+      }
+
+      @media (max-width: 991px) {
+        #hero {
+          text-align: center;
+          padding-top: 120px;
+        }
+        #hero .btn-get-started {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+        #hero .d-flex {
+          flex-direction: column;
+          align-items: center;
+        }
+        #hero .hero-img img {
+          width: 60%;
+          margin-top: 30px;
+        }
+      }
+
+      @keyframes up-down {
+        0% {
+          transform: translateY(10px);
+        }
+        100% {
+          transform: translateY(-10px);
+        }
+      }
+
+      /* Styling tambahan untuk logo di header */
+      .logo img {
+        max-height: 40px;
+      }
+      .sitename {
+        color: #fff !important;
+        font-weight: 700;
+        font-size: 24px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      /* Reset default styling */
+      body {
+        font-family: "Open Sans", sans-serif;
+      }
+      a {
+        text-decoration: none;
+      }
+
+      /* Class khusus untuk efek gradien teks Fast Track */
+      .fast-track-gradient {
+        /* Gradien Merah (0%) -> Putih (50%) -> Kuning (100%) */
+        background: linear-gradient(
+          90deg,
+          #ee1c25 0%,
+          #ffffff 50%,
+          #ffd200 100%
+        );
+
+        /* Properti standar untuk memotong background mengikuti bentuk teks */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+
+        /* Drop shadow agar teks tetap terbaca jelas */
+        filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.5));
+      }
+
+      /* Jika ingin gradien Merah-Putih-Kuning (Catatan: Merah di atas background Merah akan tidak terlihat) */
+      .fast-track-gradient-alt {
+        background: linear-gradient(
+          90deg,
+          #ee1c25 50%,
+          #ffffff 50%,
+          #ffd200 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    </style>
+  </head>
+
+  <body class="index-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center"
+      >
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <img
+            src="src/assets/img/logo-fast-track.png"
+            alt="Fast Track Logo"
+            class="img-fluid me-2"
+            style="max-height: 40px"
+          />
+          <h1 class="sitename">Fast Track</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#team">Team</a></li>
+            <!-- <li><a href="#pricing">Pricing</a></li> -->
+            <!-- <li><a href="#recent-blog-postst">Blog</a></li> -->
+            <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li> -->
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <a class="btn-getstarted" href="#about">Get Started</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Hero Section -->
+      <section id="hero" class="hero section dark-background">
+        <div class="container">
+          <div class="row gy-4">
+            <div
+              class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center"
+              data-aos="zoom-out"
+            >
+              <h1>
+                <strong>Selamat Datang di </strong>
+                <br />
+                <span
+                  class="fast-track-gradient"
+                  style="font-weight: 800; font-size: 1.1em"
+                  >FAST TRACK</span
+                >
+              </h1>
+
+              <p class="fw-bold mt-3" style="font-size: 1.1rem">
+                "Tracking Your Business With Fast Track!"<br />
+                Kelola dan lacak bisnis Anda dengan mudah melalui web dashboard
+                yang komprehensif dan user-friendly.
+              </p>
+              <div class="d-flex">
+                <!-- <a href="#about" class="btn-get-started">Get Started</a>
+                <a
+                  href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
+                  class="glightbox btn-watch-video d-flex align-items-center"
+                  ><i class="bi bi-play-circle"></i><span>Watch Video</span></a
+                > -->
+              </div>
+            </div>
+            <div
+              class="col-lg-6 order-1 order-lg-2 hero-img"
+              data-aos="zoom-out"
+              data-aos-delay="200"
+            >
+              <img
+                src="src/assets/img/logo-fast-track.png"
+                class="img-fluid animated"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Hero Section -->
+
+      <!-- Clients Section -->
+      <section id="clients" class="clients section light-background">
+        <div class="container" data-aos="zoom-in">
+          <div class="swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 600,
+                "autoplay": {
+                  "delay": 5000
+                },
+                "slidesPerView": "auto",
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "type": "bullets",
+                  "clickable": true
+                },
+                "breakpoints": {
+                  "320": {
+                    "slidesPerView": 2,
+                    "spaceBetween": 40
+                  },
+                  "480": {
+                    "slidesPerView": 3,
+                    "spaceBetween": 60
+                  },
+                  "640": {
+                    "slidesPerView": 4,
+                    "spaceBetween": 80
+                  },
+                  "992": {
+                    "slidesPerView": 5,
+                    "spaceBetween": 120
+                  },
+                  "1200": {
+                    "slidesPerView": 6,
+                    "spaceBetween": 120
+                  }
+                }
+              }
+            </script>
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide">
+                <img
+                  src="src/assets/img/logo-nabati.jpeg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="src/assets/img/logo-madudiz.jpeg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="src/assets/img/logo-vitabumin.jpeg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="src/assets/img/logo-j&texpress.jpeg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="src/assets/img/logo-sky-parking.jpeg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="src/assets/img/logo-airpro-indonesia.jpeg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="src/assets/img/logo-bejo-jamer.jpeg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="src/assets/img/logo-hatari.jpeg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Clients Section -->
+
+      <!-- About Section -->
+      <section id="about" class="about section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>About Us</h2>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row gy-4">
+            <div
+              class="col-lg-6 content"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <p>
+                Tim Fast Track didirikan pada tanggal 29 Mei 2025 dengan misi
+                menghadirkan solusi digital yang efisien. Proyek perdana kami,
+                aplikasi Fast Track, dirancang khusus untuk memantau kinerja
+                karyawan lapangan seperti kurir, sales, dan SPG guna
+                meningkatkan produktivitas tim.
+              </p>
+              <ul>
+                <li>
+                  <i class="bi bi-check2-circle"></i>
+                  <span
+                    >Monitoring kinerja karyawan (Sales, SPG, Kurir) secara
+                    real-time.</span
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-check2-circle"></i>
+                  <span
+                    >Pemantauan alur bisnis (Penjualan, Pembelian, Kunjungan
+                    Outlet).</span
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-check2-circle"></i>
+                  <span
+                    >Penyimpanan database aman dengan pengelolaan data yang
+                    efisien.</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+              <p>
+                Fast Track hadir sebagai solusi ekosistem digital komprehensif
+                yang melampaui sekadar monitoring kinerja SDM, mengintegrasikan
+                pengelolaan alur bisnis dari hulu ke hilir mulai dari penjualan
+                hingga pelacakan kunjungan outlet secara terperinci. Dengan
+                dukungan teknologi geolokasi presisi yang menjamin transparansi
+                aktivitas lapangan, sistem kami juga memprioritaskan keamanan
+                aset digital melalui database terenkripsi dan arsitektur data
+                yang efisien, memastikan aplikasi tetap ringan serta hemat ruang
+                penyimpanan di era modern ini.
+              </p>
+              <!-- <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a> -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /About Section -->
+
+      <!-- Why Us Section -->
+      <section
+        id="why-us"
+        class="section why-us light-background"
+        data-builder="section"
+      >
+        <div class="container-fluid">
+          <div class="row gy-4">
+            <div
+              class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1"
+            >
+              <div
+                class="content px-xl-5"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <h3>
+                  <span>Mengapa Bisnis Anda Membutuhkan </span
+                  ><strong>Tim Fast Track?</strong>
+                </h3>
+                <p>
+                  Kami menghadirkan solusi teknologi yang tidak hanya memantau,
+                  tetapi juga mengoptimalkan setiap langkah operasional bisnis
+                  Anda dengan efisiensi tinggi.
+                </p>
+              </div>
+
+              <div
+                class="faq-container px-xl-5"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <div class="faq-item faq-active">
+                  <h3>
+                    <span>01</span> Bagaimana Fast Track meningkatkan
+                    produktivitas tim lapangan?
+                  </h3>
+                  <div class="faq-content">
+                    <p>
+                      Aplikasi kami dirancang khusus untuk memantau kinerja
+                      kurir, sales, dan SPG secara real-time. Dengan fitur
+                      pelacakan kunjungan outlet yang akurat, perusahaan dapat
+                      memastikan setiap target kunjungan terpenuhi,
+                      meminimalisir kecurangan, dan meningkatkan akuntabilitas
+                      karyawan secara signifikan.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3>
+                    <span>02</span> Apakah aplikasi ini hanya sekadar alat
+                    monitoring karyawan?
+                  </h3>
+                  <div class="faq-content">
+                    <p>
+                      Tidak, Fast Track adalah solusi manajemen bisnis yang
+                      menyeluruh. Selain memantau SDM, sistem kami
+                      mengintegrasikan alur proses bisnis vital seperti
+                      pencatatan penjualan, pembelian produk, hingga laporan
+                      kunjungan outlet. Ini memberikan Anda kendali penuh atas
+                      operasional bisnis dalam satu platform terpadu.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3>
+                    <span>03</span> Bagaimana jaminan keamanan dan efisiensi
+                    data di Fast Track?
+                  </h3>
+                  <div class="faq-content">
+                    <p>
+                      Keamanan adalah prioritas utama kami. Seluruh progres
+                      bisnis disimpan dalam database yang aman dan terenkripsi.
+                      Selain itu, kami menggunakan arsitektur pengelolaan data
+                      modern yang efisien, sehingga aplikasi tetap ringan dan
+                      cepat dalam meminimalisir penggunaan penyimpanan, sesuai
+                      dengan standar teknologi masa kini.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End Faq item-->
+              </div>
+            </div>
+
+            <div class="col-lg-5 order-1 order-lg-2 why-us-img">
+              <img
+                src="assets/img/why-us.png"
+                class="img-fluid"
+                alt=""
+                data-aos="zoom-in"
+                data-aos-delay="100"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Why Us Section -->
+
+      <!-- Skills Section -->
+      <section id="skills" class="skills section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row">
+            <div class="col-lg-6 d-flex align-items-center">
+              <img
+                src="assets/img/illustration/illustration-10.webp"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+
+            <div class="col-lg-6 pt-4 pt-lg-0 content">
+              <h3>Visi & Misi Fast Track</h3>
+              <p class="fst-italic">
+                Kami berkomitmen untuk mendorong transformasi digital yang
+                efektif bagi operasional bisnis Anda.
+              </p>
+
+              <div class="skills-content" style="margin-top: 20px">
+                <div class="d-flex align-items-start mb-3">
+                  <i class="bi bi-eye-fill text-primary fs-4 me-3"></i>
+                  <div>
+                    <h4 class="fw-bold mb-1">Visi</h4>
+                    <p>
+                      Menjadi solusi digital terdepan dalam monitoring dan
+                      manajemen tim lapangan berbasis teknologi.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-start">
+                  <i class="bi bi-bullseye text-primary fs-4 me-3"></i>
+                  <div>
+                    <h4 class="fw-bold mb-1">Misi</h4>
+                    <p>
+                      Menyediakan platform mobile & dashboard yang andal,
+                      inovatif, dan real-time untuk meningkatkan efisiensi dan
+                      kinerja perusahaan.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Skills Section -->
+
+      <!-- Services Section -->
+      <section id="services" class="services section light-background">
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Services</h2>
+          <p>
+            Solusi digital komprehensif untuk optimalisasi manajemen lapangan
+            dan operasional bisnis Anda.
+          </p>
+        </div>
+        <div class="container">
+          <div class="row gy-4">
+            <div
+              class="col-xl-3 col-md-6 d-flex"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="service-item position-relative">
+                <div class="icon"><i class="bi bi-activity icon"></i></div>
+                <h4>
+                  <a href="" class="stretched-link">Monitoring Kinerja</a>
+                </h4>
+                <p>
+                  Pantau produktivitas kurir, sales, dan SPG secara real-time
+                  dan terukur demi pencapaian target yang maksimal.
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-xl-3 col-md-6 d-flex"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="service-item position-relative">
+                <div class="icon"><i class="bi bi-briefcase icon"></i></div>
+                <h4><a href="" class="stretched-link">Manajemen Bisnis</a></h4>
+                <p>
+                  Integrasi alur penjualan, pembelian, dan pengelolaan data
+                  operasional dalam satu dashboard yang efisien.
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-xl-3 col-md-6 d-flex"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="service-item position-relative">
+                <div class="icon"><i class="bi bi-geo-alt icon"></i></div>
+                <h4><a href="" class="stretched-link">Pelacakan Lokasi</a></h4>
+                <p>
+                  Verifikasi kunjungan outlet dan pelacakan posisi tim lapangan
+                  secara akurat untuk meminimalisir kecurangan.
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-xl-3 col-md-6 d-flex"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="service-item position-relative">
+                <div class="icon"><i class="bi bi-shield-check icon"></i></div>
+                <h4><a href="" class="stretched-link">Keamanan Data</a></h4>
+                <p>
+                  Penyimpanan database yang aman, terenkripsi, dan ringan untuk
+                  menjamin kerahasiaan informasi bisnis Anda.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Services Section -->
+
+      <!-- Work Process Section -->
+      <section id="work-process" class="work-process section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Work Process</h2>
+          <p>
+            Inilah standar prosedur operasional tim Fast Track dalam menangani
+            setiap pengembangan proyek.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-5">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="steps-item">
+                <div class="steps-image">
+                  <img
+                    src="assets/img/steps/steps-1.webp"
+                    alt="Step 1"
+                    class="img-fluid"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="steps-content">
+                  <div class="steps-number">01</div>
+                  <h3>Penelitian & Analisis</h3>
+                  <p>
+                    Ini adalah tahap pondasi sebelum memulai pengerjaan teknis.
+                    Tujuannya adalah memvalidasi ide dan memahami kebutuhan.
+                  </p>
+                  <div class="steps-features">
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle"></i>
+                      <span>Market Research</span>
+                    </div>
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle"></i>
+                      <span>Data Analysis</span>
+                    </div>
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle"></i>
+                      <span>Client Feedback</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Steps Item -->
+            </div>
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="steps-item">
+                <div class="steps-image">
+                  <img
+                    src="assets/img/steps/steps-2.webp"
+                    alt="Step 2"
+                    class="img-fluid"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="steps-content">
+                  <div class="steps-number">02</div>
+                  <h3>Desain & Perencanaan</h3>
+                  <p>
+                    Setelah data terkumpul, proses berlanjut ke tahap
+                    perancangan visual dan struktur. Di sini, ide diubah menjadi
+                    rencana konkret.
+                  </p>
+                  <div class="steps-features">
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle"></i>
+                      <span>Wireframing</span>
+                    </div>
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle"></i>
+                      <span>UI/UX Design</span>
+                    </div>
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle"></i>
+                      <span>Prototyping</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Steps Item -->
+            </div>
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
+              <div class="steps-item">
+                <div class="steps-image">
+                  <img
+                    src="assets/img/steps/steps-3.webp"
+                    alt="Step 3"
+                    class="img-fluid"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="steps-content">
+                  <div class="steps-number">03</div>
+                  <h3>Pengembangan & Peluncuran</h3>
+                  <p>
+                    Ini adalah tahap eksekusi akhir di mana produk benar-benar
+                    dibangun dan dirilis ke publik untuk digunakan.
+                  </p>
+                  <div class="steps-features">
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle"></i>
+                      <span>Development</span>
+                    </div>
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle"></i>
+                      <span>Testing</span>
+                    </div>
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle"></i>
+                      <span>Deployment</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Steps Item -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Work Process Section -->
+
+      <!-- Call To Action Section -->
+      <!-- <section
+        id="call-to-action"
+        class="call-to-action section dark-background"
+      >
+        <img src="assets/img/bg/bg-8.webp" alt="" />
+
+        <div class="container">
+          <div class="row" data-aos="zoom-in" data-aos-delay="100">
+            <div class="col-xl-9 text-center text-xl-start">
+              <h3>Call To Action</h3>
+              <p>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum.
+              </p>
+            </div>
+            <div class="col-xl-3 cta-btn-container text-center">
+              <a class="cta-btn align-middle" href="#">Call To Action</a>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="portfolio section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Portfolio</h2>
+          <p>Project yang dibuat oleh tim Fast Track.</p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div
+            class="isotope-layout"
+            data-default-filter="*"
+            data-layout="masonry"
+            data-sort="original-order"
+          >
+            <ul
+              class="portfolio-filters isotope-filters"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">Mobile App</li>
+              <li data-filter=".filter-product">Web</li>
+            </ul>
+            <!-- End Portfolio Filters -->
+
+            <div
+              class="row gy-4 isotope-container"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div
+                class="col-lg-2 col-md-4 portfolio-item isotope-item filter-app"
+              >
+                <img
+                  src="src/assets/img/login-mobile.jpeg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Login Mobile App</h4>
+                  <p>
+                    Aplikasi yang digunakan pengguna untuk mendata laporan
+                    proses bisnis.
+                  </p>
+                  <a
+                    href="src/assets/img/login-mobile.jpeg"
+                    title="App 1"
+                    data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <!-- <a
+                    href="portfolio-details.html"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a> -->
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-2 col-md-4 portfolio-item isotope-item filter-app"
+              >
+                <img
+                  src="src/assets/img/beranda-mobile.jpeg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Beranda Mobile App</h4>
+                  <p>
+                    Berisi ringkasan laporan yang telah dibuat atau hasil
+                    kinerja.
+                  </p>
+                  <a
+                    href="src/assets/img/beranda-mobile.jpeg"
+                    title="App 2"
+                    data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <!-- <a
+                    href="portfolio-details.html"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a> -->
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-2 col-md-4 portfolio-item isotope-item filter-app"
+              >
+                <img
+                  src="src/assets/img/fitur-mobile.jpeg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Fitur Mobile App</h4>
+                  <p>
+                    Fitur-fitur yang tersedia dalam aplikasi mobile untuk
+                    memudahkan pengguna.
+                  </p>
+                  <a
+                    href="src/assets/img/fitur-mobile.jpeg"
+                    title="App 3"
+                    data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <!-- <a
+                    href="portfolio-details.html"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a> -->
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-2 col-md-4 portfolio-item isotope-item filter-app"
+              >
+                <img
+                  src="src/assets/img/fitur-mobile.jpeg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Laporan Penjualan Mobile App</h4>
+                  <p>
+                    Menampilkan laporan penjualan yang telah dilakukan melalui
+                    aplikasi mobile.
+                  </p>
+                  <a
+                    href="src/assets/img/laporan-penjualan-mobile.jpeg"
+                    title="App 3"
+                    data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <!-- <a
+                    href="portfolio-details.html"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a> -->
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-2 col-md-4 portfolio-item isotope-item filter-app"
+              >
+                <img
+                  src="src/assets/img/absensi-mobile.jpeg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Absensi Mobile App</h4>
+                  <p>
+                    Fitur absensi yang memudahkan pencatatan kehadiran pengguna.
+                  </p>
+                  <a
+                    href="src/assets/img/absensi-mobile.jpeg"
+                    title="App 3"
+                    data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <!-- <a
+                    href="portfolio-details.html"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a> -->
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-2 col-md-4 portfolio-item isotope-item filter-app"
+              >
+                <img
+                  src="src/assets/img/pengaturan-mobile.jpeg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Pengaturan Mobile App</h4>
+                  <p>
+                    Fitur pengaturan yang memungkinkan pengguna mengelola
+                    preferensi aplikasi.
+                  </p>
+                  <a
+                    href="src/assets/img/pengaturan-mobile.jpeg"
+                    title="App 3"
+                    data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <!-- <a
+                    href="portfolio-details.html"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a> -->
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
+              >
+                <img
+                  src="src/assets/img/login-web.png"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Login Web Dashboard</h4>
+                  <p>
+                    Aplikasi web untuk memantau hasil kinerja karyawan secara
+                    real-time.
+                  </p>
+                  <a
+                    href="src/assets/img/login-web.png"
+                    title="Product 1"
+                    data-gallery="portfolio-gallery-product"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <!-- <a
+                    href="https://www.fastrackdigitalindonesia.com/"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a> -->
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
+              >
+                <img
+                  src="src/assets/img/beranda-web.png"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Beranda Web Dashboard</h4>
+                  <p>
+                    Halaman utama yang menampilkan ringkasan dan navigasi ke
+                    fitur lainnya.
+                  </p>
+                  <a
+                    href="src/assets/img/beranda-web.png"
+                    title="Product 2"
+                    data-gallery="portfolio-gallery-product"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <!-- <a
+                    href="https://www.fastrackdigitalindonesia.com/"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a> -->
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
+              >
+                <img
+                  src="src/assets/img/pelacakan-web.png"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Pelacakan Web Dashboard</h4>
+                  <p>
+                    Fitur pelacakan yang memungkinkan pemantauan lokasi dan
+                    status secara real-time.
+                  </p>
+                  <a
+                    href="src/assets/img/pelacakan-web.png"
+                    title="Product 3"
+                    data-gallery="portfolio-gallery-product"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <!-- <a
+                    href="https://www.fastrackdigitalindonesia.com/"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a> -->
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
+              >
+                <img
+                  src="src/assets/img/outlet-web.png"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Outlet Web Dashboard</h4>
+                  <p>
+                    Menampilkan informasi dan pengelolaan outlet yang terdaftar
+                    dalam sistem.
+                  </p>
+                  <a
+                    href="src/assets/img/outlet-web.png"
+                    title="Product 3"
+                    data-gallery="portfolio-gallery-product"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <!-- <a
+                    href="https://www.fastrackdigitalindonesia.com/"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a> -->
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
+              >
+                <img
+                  src="src/assets/img/promosi-web.png"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Promosi Web Dashboard</h4>
+                  <p>
+                    Menampilkan dan mengelola promosi yang sedang berlangsung
+                    atau akan datang.
+                  </p>
+                  <a
+                    href="src/assets/img/promosi-web.png"
+                    title="Product 3"
+                    data-gallery="portfolio-gallery-product"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <!-- <a
+                    href="https://www.fastrackdigitalindonesia.com/"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a> -->
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
+              >
+                <img
+                  src="src/assets/img/laporan-web.png"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Laporan Web Dashboard</h4>
+                  <p>
+                    Menampilkan laporan hasil kinerja yang telah dicapai melalui
+                    dashboard web.
+                  </p>
+                  <a
+                    href="src/assets/img/laporan-web.png"
+                    title="Product 3"
+                    data-gallery="portfolio-gallery-product"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <!-- <a
+                    href="https://www.fastrackdigitalindonesia.com/"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a> -->
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+            </div>
+            <!-- End Portfolio Container -->
+          </div>
+        </div>
+      </section>
+      <!-- /Portfolio Section -->
+
+      <!-- Team Section -->
+      <section id="team" class="team section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Team Fast Track</h2>
+          <p>
+            Tim profesional di balik kesuksesan FastTrack dalam memberikan
+            solusi tracking terbaik.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="team-member d-flex align-items-start">
+                <div class="pic">
+                  <img
+                    src="src/assets/img/bahrul.jpeg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="member-info">
+                  <h4>ANDI BAHRULI</h4>
+                  <span>Founder</span>
+                  <p>
+                    Berkontribusi krusial yang melampaui sekadar ide awal, yaitu
+                    bertindak sebagai penggerak utama, pengambil risiko
+                    tertinggi, dan pembentuk arah strategis perusahaan.
+                  </p>
+                  <!-- <div class="social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""> <i class="bi bi-linkedin"></i> </a>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+            <!-- End Team Member -->
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="team-member d-flex align-items-start">
+                <div class="pic">
+                  <img
+                    src="src/assets/img/rifqy.jpeg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="member-info">
+                  <h4>RIFQY ANUGERAH</h4>
+                  <span>Fullstack Developer</span>
+                  <p>
+                    Berkontribusi dengan menangani seluruh siklus pengembangan
+                    aplikasi, mulai dari antarmuka pengguna (front-end), logika
+                    server (back-end), hingga manajemen basis data.
+                  </p>
+                  <!-- <div class="social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""> <i class="bi bi-linkedin"></i> </a>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+            <!-- End Team Member -->
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="team-member d-flex align-items-start">
+                <div class="pic">
+                  <img
+                    src="src/assets/img/prastia.jpeg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="member-info">
+                  <h4>PRASTIA ZAMAN</h4>
+                  <span>Backend Developer</span>
+                  <p>
+                    Berkontribusi vital dalam membangun infrastruktur aplikasi
+                    yang stabil, aman, dan efisien melalui pengelolaan server,
+                    basis data, dan logika bisnis di balik layar.
+                  </p>
+                  <!-- <div class="social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""> <i class="bi bi-linkedin"></i> </a>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+            <!-- End Team Member -->
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="team-member d-flex align-items-start">
+                <div class="pic">
+                  <img
+                    src="src/assets/img/suryana.jpeg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="member-info">
+                  <h4>SURYANA</h4>
+                  <span>Mobile Developer</span>
+                  <p>
+                    Berkontribusi merancang, membangun, dan memelihara aplikasi
+                    (Android/iOS) dengan menerjemahkan kebutuhan bisnis menjadi
+                    kode, mengoptimalkan performa, serta menjamin antarmuka
+                    pengguna (UI/UX) yang responsif.
+                  </p>
+                  <!-- <div class="social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""> <i class="bi bi-linkedin"></i> </a>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+            <!-- End Team Member -->
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+              <div class="team-member d-flex align-items-start">
+                <div class="pic">
+                  <img
+                    src="src/assets/img/hasta.jpeg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="member-info">
+                  <h4>HERMANUS HASTA</h4>
+                  <span>Frontend Developer & UI/UX</span>
+                  <p>
+                    Berkontribusi dalam menciptakan antarmuka pengguna (UI) yang
+                    interaktif, responsif, dan fungsional menggunakan HTML, CSS,
+                    dan JavaScript
+                  </p>
+                  <!-- <div class="social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""> <i class="bi bi-linkedin"></i> </a>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+            <!-- End Team Member -->
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="team-member d-flex align-items-start">
+                <div class="pic">
+                  <img src="src/assets/img/hana.jpg" class="img-fluid" alt="" />
+                </div>
+                <div class="member-info">
+                  <h4>HANA INDAH</h4>
+                  <span>IT Support</span>
+                  <p>
+                    Berkontribusi dalam memastikan operasional bisnis berjalan
+                    lancar dengan memelihara infrastruktur TI, memperbaiki
+                    masalah perangkat keras/lunak, dan menjaga keamanan jaringan
+                  </p>
+                  <!-- <div class="social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""> <i class="bi bi-linkedin"></i> </a>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+            <!-- End Team Member -->
+          </div>
+        </div>
+      </section>
+      <!-- /Team Section -->
+
+      <!-- Pricing Section -->
+      <!-- <section id="pricing" class="pricing section light-background">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Pricing</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div>
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="pricing-item">
+              <h3>Free Plan</h3>
+              <h4><sup>$</sup>0<span> / month</span></h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+              </ul>
+              <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="pricing-item featured">
+              <h3>Business Plan</h3>
+              <h4><sup>$</sup>29<span> / month</span></h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+              </ul>
+              <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="pricing-item">
+              <h3>Developer Plan</h3>
+              <h4><sup>$</sup>49<span> / month</span></h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+              </ul>
+              <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section> -->
+
+      <!-- Testimonials Section -->
+      <!-- <section id="testimonials" class="testimonials section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/person/person-m-9.webp" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/person/person-f-5.webp" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/person/person-f-12.webp" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/person/person-m-12.webp" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/person/person-m-13.webp" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section> -->
+
+      <!-- Faq 2 Section -->
+      <!-- <section id="faq-2" class="faq-2 section light-background">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Frequently Asked Questions</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      </div>
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-10">
+
+            <div class="faq-container">
+
+              <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Non consectetur a erat nam at lectus urna duis?</h3>
+                <div class="faq-content">
+                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</h3>
+                <div class="faq-content">
+                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
+                <div class="faq-content">
+                  <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h3>
+                <div class="faq-content">
+                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Tempus quam pellentesque nec nam aliquam sem et tortor consequat?</h3>
+                <div class="faq-content">
+                  <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section> -->
+
+      <!-- Subscribe Section -->
+      <!-- <section id="subscribe" class="subscribe section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4 justify-content-between align-items-center">
+          <div class="col-lg-6">
+            <div class="cta-content" data-aos="fade-up" data-aos-delay="200">
+              <h2>Subscribe to our newsletter</h2>
+              <p>Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam id dui posuere blandit.</p>
+              <form action="forms/newsletter.php" method="post" class="php-email-form cta-form" data-aos="fade-up" data-aos-delay="300">
+                <div class="input-group mb-3">
+                  <input type="email" class="form-control" placeholder="Email address..." aria-label="Email address" aria-describedby="button-subscribe">
+                  <button class="btn btn-primary" type="submit" id="button-subscribe">Subscribe</button>
+                </div>
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="cta-image" data-aos="zoom-out" data-aos-delay="200">
+              <img src="assets/img/cta/cta-1.webp" alt="" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+      <!-- Recent Blog Postst Section -->
+      <!-- <section
+        id="recent-blog-postst"
+        class="recent-blog-postst section light-background"
+      >
+        
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Recent Blog Posts</h2>
+          <p>
+            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+            consectetur velit
+          </p>
+        </div>
+
+        <div class="container">
+          <div class="row gy-5">
+            <div class="col-xl-4 col-md-6">
+              <div
+                class="post-item position-relative h-100"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div class="post-img position-relative overflow-hidden">
+                  <img
+                    src="assets/img/blog/blog-post-1.webp"
+                    class="img-fluid"
+                    alt=""
+                  />
+                  <span class="post-date">December 12</span>
+                </div>
+
+                <div class="post-content d-flex flex-column">
+                  <h3 class="post-title">
+                    Eum ad dolor et. Autem aut fugiat debitis
+                  </h3>
+
+                  <div class="meta d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-person"></i>
+                      <span class="ps-2">Julia Parker</span>
+                    </div>
+                    <span class="px-3 text-black-50">/</span>
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-folder2"></i>
+                      <span class="ps-2">Politics</span>
+                    </div>
+                  </div>
+
+                  <hr />
+
+                  <a href="blog-details.html" class="readmore stretched-link"
+                    ><span>Read More</span><i class="bi bi-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4 col-md-6">
+              <div
+                class="post-item position-relative h-100"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <div class="post-img position-relative overflow-hidden">
+                  <img
+                    src="assets/img/blog/blog-post-2.webp"
+                    class="img-fluid"
+                    alt=""
+                  />
+                  <span class="post-date">July 17</span>
+                </div>
+
+                <div class="post-content d-flex flex-column">
+                  <h3 class="post-title">
+                    Et repellendus molestiae qui est sed omnis
+                  </h3>
+
+                  <div class="meta d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-person"></i>
+                      <span class="ps-2">Mario Douglas</span>
+                    </div>
+                    <span class="px-3 text-black-50">/</span>
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-folder2"></i>
+                      <span class="ps-2">Sports</span>
+                    </div>
+                  </div>
+
+                  <hr />
+
+                  <a href="blog-details.html" class="readmore stretched-link"
+                    ><span>Read More</span><i class="bi bi-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-xl-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="post-item position-relative h-100">
+                <div class="post-img position-relative overflow-hidden">
+                  <img
+                    src="assets/img/blog/blog-post-3.webp"
+                    class="img-fluid"
+                    alt=""
+                  />
+                  <span class="post-date">September 05</span>
+                </div>
+
+                <div class="post-content d-flex flex-column">
+                  <h3 class="post-title">
+                    Quia assumenda est et veritati tirana ploder
+                  </h3>
+
+                  <div class="meta d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-person"></i>
+                      <span class="ps-2">Lisa Hunter</span>
+                    </div>
+                    <span class="px-3 text-black-50">/</span>
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-folder2"></i>
+                      <span class="ps-2">Economics</span>
+                    </div>
+                  </div>
+
+                  <hr />
+
+                  <a href="blog-details.html" class="readmore stretched-link"
+                    ><span>Read More</span><i class="bi bi-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <!-- /Recent Blog Postst Section -->
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact section">
+      
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Info lebih lengkapnya bisa hubungi kontak tim Fast Track</p>
+      </div><div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 justify-content-center">
+
+          <div class="col-lg-10">
+            
+            <div class="info-wrap">
+              
+              <div class="row gy-4 mb-4">
+                
+                <div class="col-md-4 info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-geo-alt flex-shrink-0"></i>
+                  <div>
+                    <h3>Address</h3>
+                    <p>A108 Adam Street, New York, NY 535022</p>
+                  </div>
+                </div><div class="col-md-4 info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-telephone flex-shrink-0"></i>
+                  <div>
+                    <h3>Call Us</h3>
+                    <p>+62 83115250034</p>
+                  </div>
+                </div><div class="col-md-4 info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bi bi-envelope flex-shrink-0"></i>
+                  <div>
+                    <h3>Email Us</h3>
+                    <p>info@example.com</p>
+                  </div>
+                </div></div>
+
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00613772404314!3d40.71312937139336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a23e28c1191%3A0x49f75d3281df052a!2sNew%20York%20City%20Hall!5e0!3m2!1sen!2sus!4v1706696740000!5m2!1sen!2sus" 
+                frameborder="0" 
+                style="border:0; width: 100%; height: 400px;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+
+            </div>
+          </div>
+
+            <!-- <div class="col-lg-7">
+              <form
+                action="forms/contact.php"
+                method="post"
+                class="php-email-form"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <div class="row gy-4">
+                  <div class="col-md-6">
+                    <label for="name-field" class="pb-2">Your Name</label>
+                    <input
+                      type="text"
+                      name="name"
+                      id="name-field"
+                      class="form-control"
+                      required=""
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="email-field" class="pb-2">Your Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      id="email-field"
+                      required=""
+                    />
+                  </div>
+
+                  <div class="col-md-12">
+                    <label for="subject-field" class="pb-2">Subject</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="subject"
+                      id="subject-field"
+                      required=""
+                    />
+                  </div>
+
+                  <div class="col-md-12">
+                    <label for="message-field" class="pb-2">Message</label>
+                    <textarea
+                      class="form-control"
+                      name="message"
+                      rows="10"
+                      id="message-field"
+                      required=""
+                    ></textarea>
+                  </div>
+
+                  <div class="col-md-12 text-center">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">
+                      Your message has been sent. Thank you!
+                    </div>
+
+                    <button type="submit">Send Message</button>
+                  </div>
+                </div>
+              </form>
+            </div> -->
+            <!-- End Contact Form -->
+          </div>
+        </div>
+      </section>
+      <!-- /Contact Section -->
+    </main>
+
+    <!-- <footer id="footer" class="footer">
+      <div class="footer-newsletter">
+        <div class="container">
+          <div class="row justify-content-center text-center">
+            <div class="col-lg-6">
+              <h4>Join Our Newsletter</h4>
+              <p>
+                Subscribe to our newsletter and receive the latest news about
+                our products and services!
+              </p>
+              <form
+                action="forms/newsletter.php"
+                method="post"
+                class="php-email-form"
+              >
+                <div class="newsletter-form">
+                  <input type="email" name="email" /><input
+                    type="submit"
+                    value="Subscribe"
+                  />
+                </div>
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">
+                  Your subscription request has been sent. Thank you!
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="d-flex align-items-center">
+              <span class="sitename">Arsha</span>
+            </a>
+            <div class="footer-contact pt-3">
+              <p>A108 Adam Street</p>
+              <p>New York, NY 535022</p>
+              <p class="mt-3">
+                <strong>Phone:</strong> <span>+62 83115250034</span>
+              </p>
+              <p><strong>Email:</strong> <span>info@example.com</span></p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+              <li>
+                <i class="bi bi-chevron-right"></i> <a href="#">About us</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i> <a href="#">Services</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i> <a href="#">Contact us</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="#">Web Development</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i> <a href="#">Mobile Development</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-12">
+            <h4>Follow Us</h4>
+            <p>
+              Silahkan follow media sosial kami untuk info
+              terbaru.
+            </p>
+            <div class="social-links d-flex">
+              <!-- <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a> -->
+              <a href="https://www.instagram.com/ftrack.idn?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="bi bi-instagram"></i></a>
+              <!-- <a href=""><i class="bi bi-linkedin"></i></a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container copyright text-center mt-4">
+  <p>
+    © <span>2025</span> <strong class="px-1 fw-bold" style="color: red; font-weight: bold;">Fast Track</strong>
+    <span>All Rights Reserved</span>
+  </p>
+  <div class="credits">
+  </div>
+</div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
