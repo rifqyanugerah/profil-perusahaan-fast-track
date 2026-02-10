@@ -47,223 +47,211 @@
   ======================================================== -->
     <!-- Custom Styles agar mirip referensi gambar -->
     <style>
-      /* --- HEADER STYLES --- */
-      #header {
-        /* Background header MERAH solid sesuai gambar */
-        background-color: #ed1c23de !important;
-        padding: 15px 0;
-        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-      }
+  /* --- HEADER STYLES --- */
+  #header {
+    background-color: #ed1c23de !important;
+    padding: 15px 0;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  }
 
-      /* Warna link navigasi tetap putih */
-      .navmenu ul li a {
-        color: #fff !important;
-      }
+  .navmenu ul li a {
+    color: #fff !important;
+  }
 
-      /* Tombol Get Started di Header -> KUNING */
-      .btn-getstarted {
-        background: #ffce00 !important; /* Kuning */
-        color: #000 !important; /* Teks hitam agar kontras */
-        border-radius: 50px;
-        padding: 8px 25px;
-        white-space: nowrap;
-        transition: 0.3s;
-        font-size: 14px;
-        display: inline-block;
-        text-decoration: none;
-        font-weight: 600;
-        margin-left: 20px;
-      }
+  /* Tombol Get Started di Header -> KUNING */
+  .btn-getstarted {
+    background: #ffce00 !important;
+    color: #000 !important;
+    border-radius: 50px;
+    padding: 8px 25px;
+    white-space: nowrap;
+    transition: 0.3s;
+    font-size: 14px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 20px;
+  }
 
-      .btn-getstarted:hover {
-        background: #e6b800 !important;
-        color: #000 !important;
-      }
+  .btn-getstarted:hover {
+    background: #e6b800 !important;
+    color: #000 !important;
+  }
 
-      /* --- HERO SECTION STYLES --- */
-      #hero {
-        width: 100%;
-        min-height: 85vh;
-        position: relative;
-        padding: 140px 0 60px 0;
-        display: flex;
-        align-items: center;
-        /* Gambar background peta */
-        background: url("src/assets/img/bg-fast-track.png") center center;
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
+  /* --- HERO SECTION STYLES (DIPERBARUI) --- */
+  #hero {
+    width: 100%;
+    min-height: 85vh;
+    position: relative;
+    padding: 140px 0 60px 0;
+    display: flex;
+    align-items: center;
 
-      /* Overlay Biru-Abu Transparan sesuai gambar */
-      #hero:before {
-        content: "";
-        background: rgba(
-          119,
-          119,
-          119,
-          0.799
-        ); /* Biru-abu transparan seperti di gambar */
-        position: absolute;
-        bottom: 0;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1;
-      }
+    /* Setup Background Slide CSS */
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("src/assets/img/bg-fast-track1.png");
+    
+    /* Transisi halus saat gambar berubah */
+    transition: background-image 0.8s ease-in-out;
+  }
 
-      #hero .container {
-        position: relative;
-        z-index: 2;
-      }
+  /* TOMBOL NAVIGASI SLIDE */
+  .hero-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    z-index: 10;
+    font-family: sans-serif;
+    line-height: 1;
+    background: none;
+    border: none;
+    padding: 10px;
+    transition: color 0.3s ease;
+    user-select: none;
+  }
 
-      /* Judul Hero - Italic sesuai gambar */
-      #hero h1 {
-        margin: 0 0 15px 0;
-        font-size: 48px;
-        font-weight: 700;
-        font-style: italic;
-        line-height: 1.2;
-        color: #fff;
-      }
+  .hero-nav-btn:hover {
+    color: rgba(255, 255, 255, 0.9);
+  }
 
-      /* Teks paragraf Hero */
-      #hero p {
-        color: rgba(255, 255, 255, 0.9);
-        margin-bottom: 40px;
-        font-size: 18px;
-        max-width: 600px;
-      }
+  .hero-nav-btn.prev {
+    left: 20px;
+  }
 
-      /* Tombol Get Started di dalam Hero -> BIRU MUDA */
-      #hero .btn-get-started {
-        font-family: "Jost", sans-serif;
-        font-weight: 500;
-        font-size: 16px;
-        letter-spacing: 1px;
-        display: inline-block;
-        padding: 12px 35px;
-        border-radius: 50px;
-        transition: 0.5s;
-        margin-right: 20px;
-        /* Warna Biru Muda */
-        background: #ed1c24;
-        color: #fff;
-        text-decoration: none;
-      }
+  .hero-nav-btn.next {
+    right: 20px;
+  }
 
-      #hero .btn-get-started:hover {
-        background: #ed1c24;
-      }
+  /* Tambahan: Overlay Gelap (Agar teks tetap terbaca) */
+  /* Karena ::before dipakai tombol, kita pakai teknik shadow inset atau div tambahan. 
+     Namun agar simpel di CSS ini, kita gunakan box-shadow inset pada #hero */
+  #hero {
+    box-shadow: inset 0 0 0 1000px rgba(119, 119, 119, 0.8);
+  }
 
-      /* Tombol Watch Video */
-      #hero .btn-watch-video {
-        font-size: 16px;
-        display: flex;
-        align-items: center;
-        transition: 0.5s;
-        color: #fff;
-        line-height: 1;
-        text-decoration: none;
-      }
+  #hero .container {
+    position: relative;
+    z-index: 2;
+  }
 
-      #hero .btn-watch-video i {
-        line-height: 0;
-        color: #fff;
-        font-size: 32px;
-        transition: 0.3s;
-        margin-right: 8px;
-      }
+  /* Judul Hero */
+  #hero h1 {
+    margin: 0 0 15px 0;
+    font-size: 48px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.2;
+    color: #fff;
+  }
 
-      #hero .btn-watch-video:hover i {
-        color: #e44747;
-      }
+  #hero p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 40px;
+    font-size: 18px;
+    max-width: 600px;
+  }
 
-      /* Animasi Logo Kanan */
-      #hero .animated {
-        animation: up-down 2s ease-in-out infinite alternate-reverse both;
-      }
+  /* Tombol Get Started (Hero) */
+  #hero .btn-get-started {
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 35px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin-right: 20px;
+    background: #ed1c24;
+    color: #fff;
+    text-decoration: none;
+  }
 
-      @media (max-width: 991px) {
-        #hero {
-          text-align: center;
-          padding-top: 120px;
-        }
-        #hero .btn-get-started {
-          margin-right: 0;
-          margin-bottom: 10px;
-        }
-        #hero .d-flex {
-          flex-direction: column;
-          align-items: center;
-        }
-        #hero .hero-img img {
-          width: 60%;
-          margin-top: 30px;
-        }
-      }
+  #hero .btn-get-started:hover {
+    background: #ed1c24;
+  }
 
-      @keyframes up-down {
-        0% {
-          transform: translateY(10px);
-        }
-        100% {
-          transform: translateY(-10px);
-        }
-      }
+  #hero .btn-watch-video {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    color: #fff;
+    line-height: 1;
+    text-decoration: none;
+  }
 
-      /* Styling tambahan untuk logo di header */
-      .logo img {
-        max-height: 40px;
-      }
-      .sitename {
-        color: #fff !important;
-        font-weight: 700;
-        font-size: 24px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
+  #hero .btn-watch-video i {
+    line-height: 0;
+    color: #fff;
+    font-size: 32px;
+    transition: 0.3s;
+    margin-right: 8px;
+  }
 
-      /* Reset default styling */
-      body {
-        font-family: "Open Sans", sans-serif;
-      }
-      a {
-        text-decoration: none;
-      }
+  #hero .btn-watch-video:hover i {
+    color: #e44747;
+  }
 
-      /* Class khusus untuk efek gradien teks Fast Track */
-      .fast-track-gradient {
-        /* Gradien Merah (0%) -> Putih (50%) -> Kuning (100%) */
-        background: linear-gradient(
-          90deg,
-          #ee1c25 0%,
-          #ffffff 50%,
-          #ffd200 100%
-        );
+  #hero .animated {
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+  }
 
-        /* Properti standar untuk memotong background mengikuti bentuk teks */
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        color: transparent;
+  @media (max-width: 991px) {
+    #hero {
+      text-align: center;
+      padding-top: 120px;
+    }
+    #hero .btn-get-started {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    #hero .d-flex {
+      flex-direction: column;
+      align-items: center;
+    }
+    #hero .hero-img img {
+      width: 60%;
+      margin-top: 30px;
+    }
+    /* Sembunyikan tombol panah di mobile agar tidak menutupi konten */
+    .hero-nav-btn {
+      display: none;
+    }
+  }
 
-        /* Drop shadow agar teks tetap terbaca jelas */
-        filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.5));
-      }
+  @keyframes up-down {
+    0% { transform: translateY(10px); }
+    100% { transform: translateY(-10px); }
+  }
 
-      /* Jika ingin gradien Merah-Putih-Kuning (Catatan: Merah di atas background Merah akan tidak terlihat) */
-      .fast-track-gradient-alt {
-        background: linear-gradient(
-          90deg,
-          #ee1c25 50%,
-          #ffffff 50%,
-          #ffd200 100%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-    </style>
+  .logo img { max-height: 40px; }
+  
+  .sitename {
+    color: #fff !important;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  body { font-family: "Open Sans", sans-serif; }
+  a { text-decoration: none; }
+
+  .fast-track-gradient {
+    background: linear-gradient(90deg, #ee1c25 0%, #ffffff 50%, #ffd200 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.5));
+  }
+</style>
   </head>
 
   <body class="index-page">
@@ -319,6 +307,10 @@
     <main class="main">
       <!-- Hero Section -->
       <section id="hero" class="hero section dark-background">
+        <!-- Navigation Buttons -->
+        <button class="hero-nav-btn prev" id="heroPrevBtn" aria-label="Previous slide">‹</button>
+        <button class="hero-nav-btn next" id="heroNextBtn" aria-label="Next slide">›</button>
+        
         <div class="container">
           <div class="row gy-4">
             <div
@@ -1948,7 +1940,7 @@
                   <i class="bi bi-geo-alt flex-shrink-0"></i>
                   <div>
                     <h3>Address</h3>
-                    <p>A108 Adam Street, New York, NY 535022</p>
+                    <p>Jl. Cawang Baru Utara No.17, RT.2/RW.11, Cipinang Cempedak, Kecamatan Jatinegara, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13340</p>
                   </div>
                 </div><div class="col-md-4 info-item d-flex" data-aos="fade-up" data-aos-delay="300">
                   <i class="bi bi-telephone flex-shrink-0"></i>
@@ -1960,12 +1952,12 @@
                   <i class="bi bi-envelope flex-shrink-0"></i>
                   <div>
                     <h3>Email Us</h3>
-                    <p>info@example.com</p>
+                    <p>ftrackidn@gmail.com</p>
                   </div>
                 </div></div>
 
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00613772404314!3d40.71312937139336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a23e28c1191%3A0x49f75d3281df052a!2sNew%20York%20City%20Hall!5e0!3m2!1sen!2sus!4v1706696740000!5m2!1sen!2sus" 
+                src="https://maps.google.com/maps?q=Jl.+Cawang+Baru+Utara+No.17,+Jakarta&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                 frameborder="0" 
                 style="border:0; width: 100%; height: 400px;" 
                 allowfullscreen="" 
@@ -2084,30 +2076,29 @@
         <div class="row gy-4">
           <div class="col-lg-4 col-md-6 footer-about">
             <a href="index.html" class="d-flex align-items-center">
-              <span class="sitename">Arsha</span>
+              <span class="sitename">Fast Track</span>
             </a>
             <div class="footer-contact pt-3">
-              <p>A108 Adam Street</p>
-              <p>New York, NY 535022</p>
+              <p>Jl. Cawang Baru Utara No.17, RT.2/RW.11, Cipinang Cempedak, Kecamatan Jatinegara,Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13340</p>
               <p class="mt-3">
                 <strong>Phone:</strong> <span>+62 83115250034</span>
               </p>
-              <p><strong>Email:</strong> <span>info@example.com</span></p>
+              <p><strong>Email:</strong> <span>ftrackidn@gmail.com</span></p>
             </div>
           </div>
 
           <div class="col-lg-2 col-md-3 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#hero">Home</a></li>
               <li>
-                <i class="bi bi-chevron-right"></i> <a href="#">About us</a>
+                <i class="bi bi-chevron-right"></i> <a href="#about">About us</a>
               </li>
               <li>
-                <i class="bi bi-chevron-right"></i> <a href="#">Services</a>
+                <i class="bi bi-chevron-right"></i> <a href="#services">Services</a>
               </li>
               <li>
-                <i class="bi bi-chevron-right"></i> <a href="#">Contact us</a>
+                <i class="bi bi-chevron-right"></i> <a href="#contact">Contact us</a>
               </li>
             </ul>
           </div>
@@ -2117,10 +2108,10 @@
             <ul>
               <li>
                 <i class="bi bi-chevron-right"></i>
-                <a href="#">Web Development</a>
+                <a href="#portfolio">Web Development</a>
               </li>
               <li>
-                <i class="bi bi-chevron-right"></i> <a href="#">Mobile Development</a>
+                <i class="bi bi-chevron-right"></i> <a href="#portfolio">Mobile Development</a>
               </li>
             </ul>
           </div>
@@ -2143,7 +2134,10 @@
 
       <div class="container copyright text-center mt-4">
   <p>
-    © <span>2025</span> <strong class="px-1 fw-bold" style="color: red; font-weight: bold;">Fast Track</strong>
+    © <span>2025</span> 
+    <strong class="px-1 fw-bold">
+      <a href="https://profil-perusahaan-fast-track.vercel.app/" style="color: red; text-decoration: none;">Fast Track</a>
+    </strong>
     <span>All Rights Reserved</span>
   </p>
   <div class="credits">
@@ -2174,5 +2168,70 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+    
+    <!-- Hero Background Slider JS -->
+    <script>
+      (function() {
+        const hero = document.getElementById('hero');
+        const prevBtn = document.getElementById('heroPrevBtn');
+        const nextBtn = document.getElementById('heroNextBtn');
+        
+        const backgrounds = [
+          'src/assets/img/bg-fast-track1.png',
+          'src/assets/img/bg-fast-track2.png'
+        ];
+        
+        let currentIndex = 0;
+        let autoSlideInterval;
+        
+        function updateBackground() {
+          if (hero) {
+            hero.style.backgroundImage = `url("${backgrounds[currentIndex]}")`;
+          }
+        }
+        
+        function nextSlide() {
+          currentIndex = (currentIndex + 1) % backgrounds.length;
+          updateBackground();
+          resetAutoSlide();
+        }
+        
+        function prevSlide() {
+          currentIndex = (currentIndex - 1 + backgrounds.length) % backgrounds.length;
+          updateBackground();
+          resetAutoSlide();
+        }
+        
+        function startAutoSlide() {
+          autoSlideInterval = setInterval(nextSlide, 5000); // Ganti setiap 5 detik
+        }
+        
+        function resetAutoSlide() {
+          clearInterval(autoSlideInterval);
+          startAutoSlide();
+        }
+        
+        // Event listeners
+        if (nextBtn) {
+          nextBtn.addEventListener('click', nextSlide);
+        }
+        
+        if (prevBtn) {
+          prevBtn.addEventListener('click', prevSlide);
+        }
+        
+        // Start auto-slide
+        startAutoSlide();
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'ArrowLeft') {
+            prevSlide();
+          } else if (e.key === 'ArrowRight') {
+            nextSlide();
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
